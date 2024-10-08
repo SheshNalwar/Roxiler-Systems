@@ -1,14 +1,18 @@
-import express, { response } from "express";
+import express from "express";
 import routes from "./Routes/transaction.routes.js";
 import connectDb from "./Db/db.js";
-import dotenv from "dotenv"
+import dotenv from "dotenv";
+import cors from "cors";
 const app = express();
 
 dotenv.config();
 
-const PORT = 5000;
-
-
+const PORT = process.env.PORT || 5000;
+app.use(
+    cors({
+        origin: process.env.CORS_ORIGIN,
+    })
+);
 app.use("/api", routes)
 
 app.listen(PORT, async () => {
