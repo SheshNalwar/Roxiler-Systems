@@ -1,0 +1,32 @@
+.stats {
+    text-align: center;
+    margin: 20px 0;
+
+    h1 {
+        font-size: 24px;
+        color: #333;
+        margin-bottom: 20px;
+    }
+
+    .statistics-container {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+
+        .statistics-box {
+            background-color: #f9f9f9;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 10px;
+            width: 300px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+
+            p {
+                font-size: 18px;
+                color: #555;
+                margin: 10px 0;
+            }
+        }
+    }
+}
